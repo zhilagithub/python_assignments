@@ -1,0 +1,1229 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+    
+    
+    
+
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>CIND830 - Python Programming for Data Science<a rel="noopener" class="anchor-link" href="#CIND830---Python-Programming-for-Data-Science">&#182;</a></h2><h3>Assignment 1 (15% of the final grade)<a rel="noopener" class="anchor-link" href="#Assignment-1-(15%25-of-the-final-grade)">&#182;</a></h3><h3>Due on June 6, 2023 11:59 PM<a rel="noopener" class="anchor-link" href="#Due-on-June-6,-2023-11:59-PM">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<hr/>
+<p>This is a Jupyter Notebook document that extends a simple formatting syntax for authoring HTML and PDF. Review <a rel="noopener" href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html">this</a> website for more details on using Jupyter Notebooks.</p>
+<p>Consider using a Jupyter Notebook platform to complete this assignment. Ensure using <strong>Python 3.7 release or higher</strong> then complete the assignment by inserting your Python code wherever seeing the string <code>#INSERT YOUR ANSWER HERE.</code></p>
+<p>You are expected to submit the notebook file (in IPYNB format) and the exported version (either in PDF or HTML) in the same Assignment link in D2L. Use <a rel="noopener" href="https://www.ryerson.ca/courses/students/tutorials/assignments/">these</a> guidelines to submit <strong>both</strong> the IPYNB and the exported file (HTML or PDF). Failing to submit both files will be subject to mark deduction.</p>
+<p>Please be advised that you cannot get more than 100% in this assignment, and the <strong>BONUS</strong> question (if there is any) will only be graded if all other questions have been submitted.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<hr/>
+<p>Coverage: <br/></p>
+<ol>
+<li>Data Types and Expressions <br/></li>
+<li>Repetition Statements <br/></li>
+<li>Selection Statements <br/></li>
+<li>Strings, Lists and Text Files <br/></li>
+</ol>
+<hr/>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Question 1  <strong>[30 pts]</strong>:<a rel="noopener" class="anchor-link" href="#Question-1--%5B30-pts%5D:">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p>A multi-valued function has been defined as follows</p>
+$$
+f(x) = \left\{
+    \begin{array}\\
+       ({\frac{x^2}{|x|+2}})^2 &amp; \mbox{if} \ x &lt; 5 \\
+        {\frac{x^2}{|x|+2}} &amp; \mbox{if} \ x = 5 \\
+       \sqrt{\frac{x^2}{|x|+2} } &amp; \mbox{if} \ x &gt; 5 
+    \end{array}
+\right.
+$$<p><br/></p>
+<p><strong>a)</strong> <strong>[10 pts]</strong> Write a program to ask the user to enter a floating-point real number, check whether the number is greater, equal or less than 5, then print the output according to the definition of the multi-valued function.</p>
+<p>For example, if the user enters <code>x = -57.8</code>, then the output should be:<br/>
+<code>The value of f(x) is 3121.1093571660267</code></p>
+<p>Hint: Use the <code>math</code> module as it provides access to some of the essential mathematical functions.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># import the math module</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># pick a name and define your function </span>
+
+<span class="k">def</span> <span class="nf">calculate_function_value</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Ask the user to enter a floating-point real number</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a floating-point real number: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Calculate the function value</span>
+<span class="n">f_x</span> <span class="o">=</span> <span class="n">calculate_function_value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of f(x) is&quot;</span><span class="p">,</span> <span class="n">f_x</span><span class="p">)</span>
+     
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter a floating-point real number: -57.8
+The value of f(x) is 3121.1093571660267
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>b)</strong>  <strong>[10 pts]</strong> Round the output of Q1.a to the nearest ineteger, convert that integer to a list of digits, then print the result.</p>
+<p>For example, if the user enters <code>x = -57.8</code>, then the output should be: <br/>
+<code>The value of f(x) is  3121.1093571660267</code><br/>
+<code>The list of digits is  [3, 1, 2, 1]</code></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">calculate_function_value</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Ask the user to enter a floating-point real number</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a floating-point real number: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Calculate the function value</span>
+<span class="n">f_x</span> <span class="o">=</span> <span class="n">calculate_function_value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Round the result to the nearest integer</span>
+<span class="n">rounded_result</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">f_x</span><span class="p">)</span>
+
+<span class="c1"># Convert the rounded result to a list of digits</span>
+<span class="n">digit_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">rounded_result</span><span class="p">)]</span>
+
+<span class="c1"># Print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of f(x) is&quot;</span><span class="p">,</span> <span class="n">f_x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The list of digits is&quot;</span><span class="p">,</span> <span class="n">digit_list</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter a floating-point real number: -57.8
+The value of f(x) is 3121.1093571660267
+The list of digits is [3, 1, 2, 1]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>c)</strong>  <strong>[10 pts]</strong> Write code to accept an integer number and reverse its digits. For example, if the user enters 86421, the output should be 12468.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># pick a name and define your function </span>
+
+<span class="k">def</span> <span class="nf">reverse_digits</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    
+    <span class="c1"># convert the number to a string using the str() function. Then, use string slicing with a step of -1 ([::-1])</span>
+    <span class="n">reversed_number</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Convert the reversed string back to an integer</span>
+    <span class="n">reversed_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">reversed_number</span><span class="p">)</span>
+    
+   <span class="c1"># the reversed string is returned</span>
+    <span class="k">return</span> <span class="n">reversed_number</span>
+
+<span class="c1"># Ask the user to enter an integer number</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter an integer number: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Reverse the digits of the number</span>
+<span class="n">reversed_number</span> <span class="o">=</span> <span class="n">reverse_digits</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="c1"># Print the reversed number</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The reversed number is:&quot;</span><span class="p">,</span> <span class="n">reversed_number</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter an integer number: 93
+The reversed number is: 39
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>BONUS  [10 pts]</strong>  Write a code to display the <a rel="noopener" href="https://en.wikipedia.org/wiki/Running_total">running total</a> of a sequence of numbers. For example, if the user enters <code>2,3,4,6,10</code>, the output should be <code>2 5 9 15 25</code></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># pick a name and define your function </span>
+
+
+<span class="k">def</span> <span class="nf">display_running_total</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    
+    <span class="c1"># Initialize the running total variable</span>
+    <span class="n">running_total</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Iterate through the numbers and calculate the running total</span>
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="n">running_total</span> <span class="o">+=</span> <span class="n">number</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">running_total</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+<span class="c1"># Ask the user to enter a sequence of numbers separated by commas</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a sequence of numbers separated by commas: &quot;</span><span class="p">)</span>
+
+<span class="c1"># Split the sequence string into individual numbers</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="c1"># Convert the numbers from string to integer</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+
+<span class="c1"># Display the running total</span>
+<span class="n">display_running_total</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter a sequence of numbers separated by commas: 6,10,4,5
+6 16 20 25 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<hr/>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Question 2  <strong>[30 pts]</strong>:<a rel="noopener" class="anchor-link" href="#Question-2--%5B30-pts%5D:">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>a)</strong>  <strong>[10 pts]</strong> Write a code that creates a set of passwords, based on a list of enetered country names.  Each password should be a combination of:</p>
+<ul>
+<li>The first three letters of the country name</li>
+<li>The country capital with no whitespaces</li>
+<li>The country currency in uppercase</li>
+<li>The country population in the scientific notation format</li>
+</ul>
+<p>For example, if the user enters &#39;Canada,Egypt,India,Turkey&#39;, then the code should generate the following list:</p>
+<table>
+<thead><tr>
+<th style="text-align:center;">Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">CanOttawaCAD3.55e+07</td>
+</tr>
+<tr>
+<td style="text-align:center;">EgyCairoEGP8.77e+07</td>
+</tr>
+<tr>
+<td style="text-align:center;">IndNewDelhiINR1.26e+09</td>
+</tr>
+<tr>
+<td style="text-align:center;">TurAnkaraTRY7.67e+07</td>
+</tr>
+</tbody>
+</table>
+<p>Hint:  You can use the [countryinfo] (<a rel="noopener" href="https://pypi.org/project/countryinfo/">https://pypi.org/project/countryinfo/</a>) library to generate the required information of the entered countries.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># install countryinfo package </span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">countryinfo</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#import the CountryInfo class from the countryinfo module/package.</span>
+<span class="kn">from</span> <span class="nn">countryinfo</span> <span class="kn">import</span> <span class="n">CountryInfo</span>
+
+<span class="c1"># import Regular Expressions module from the package </span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">generate_passwords</span><span class="p">(</span><span class="n">country_names</span><span class="p">):</span>
+    <span class="n">passwords</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">country_name</span> <span class="ow">in</span> <span class="n">country_names</span><span class="p">:</span>
+        <span class="n">country</span> <span class="o">=</span> <span class="n">CountryInfo</span><span class="p">(</span><span class="n">country_name</span><span class="p">)</span>
+        
+<span class="c1">#The pattern for whitespace is r&quot;\s+&quot;,we will use this pattern to match and replace whitespaces by using re. sub() function.</span>
+
+        <span class="n">country_capital</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">country</span><span class="o">.</span><span class="n">capital</span><span class="p">())</span>
+    
+        <span class="n">country_currency</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">currencies</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="n">country_population</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">population</span><span class="p">()</span>
+        
+        <span class="n">password</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">country_name</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}{</span><span class="n">country_capital</span><span class="si">}{</span><span class="n">country_currency</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}{</span><span class="n">country_population</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2">&quot;</span>
+        
+        
+        <span class="n">passwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+       
+    <span class="k">return</span> <span class="n">passwords</span>
+
+<span class="c1"># For Example </span>
+<span class="n">countries</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter country names (comma-separated): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">passwords</span> <span class="o">=</span> <span class="n">generate_passwords</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Passwords:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">password</span> <span class="ow">in</span> <span class="n">passwords</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+
+    
+    
+    
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter country names (comma-separated): Iran,Canada,France,Mexico,India,Turkey
+Passwords:
+IraTehranIRR7.80e+07
+CanOttawaCAD3.55e+07
+FraParisEUR6.61e+07
+MexMexicoCityMXN1.20e+08
+IndNewDelhiINR1.26e+09
+TurAnkaraTRY7.67e+07
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>b)</strong>  <strong>[10 pts]</strong> Count the letters of each generated password in Q2.a, then print the password along with its number of characters.</p>
+<p>For example, if the user generated the following passwords, then the output should be as follows:</p>
+<table>
+<thead><tr>
+<th style="text-align:center;">Password</th>
+<th style="text-align:center;">Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">CanOttawaCAD3.55e+07</td>
+<td style="text-align:center;">20</td>
+</tr>
+<tr>
+<td style="text-align:center;">EgyCairoEGP8.77e+07</td>
+<td style="text-align:center;">19</td>
+</tr>
+<tr>
+<td style="text-align:center;">IndNewDelhiINR1.26e+09</td>
+<td style="text-align:center;">22</td>
+</tr>
+<tr>
+<td style="text-align:center;">TurAnkaraTRY7.67e+07</td>
+<td style="text-align:center;">20</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### from countryinfo import CountryInfo</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">generate_passwords</span><span class="p">(</span><span class="n">country_names</span><span class="p">):</span>
+    <span class="n">passwords</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">country_name</span> <span class="ow">in</span> <span class="n">country_names</span><span class="p">:</span>
+        <span class="n">country</span> <span class="o">=</span> <span class="n">CountryInfo</span><span class="p">(</span><span class="n">country_name</span><span class="p">)</span>
+
+        <span class="n">country_capital</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">country</span><span class="o">.</span><span class="n">capital</span><span class="p">())</span>
+        <span class="n">country_currency</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">currencies</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">country_population</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">population</span><span class="p">()</span>
+
+        <span class="c1">#password = f&quot;{country_capital}{country_currency.upper()}{country_population:.2e}&quot;</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">country_name</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}{</span><span class="n">country_capital</span><span class="si">}{</span><span class="n">country_currency</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}{</span><span class="n">country_population</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">passwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">passwords</span>
+
+<span class="c1"># For Example</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter country names (comma-separated): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">passwords</span> <span class="o">=</span> <span class="n">generate_passwords</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Password</span><span class="se">\t\t</span><span class="s2">Length&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">password</span> <span class="ow">in</span> <span class="n">passwords</span><span class="p">:</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">password</span><span class="si">:</span><span class="s2">&lt;25</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter country names (comma-separated): Iran,Canada,France,Mexico,India,Turkey
+Password		Length
+IraTehranIRR7.80e+07     	20
+CanOttawaCAD3.55e+07     	20
+FraParisEUR6.61e+07      	19
+MexMexicoCityMXN1.20e+08 	24
+IndNewDelhiINR1.26e+09   	22
+TurAnkaraTRY7.67e+07     	20
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>c)</strong>  <strong>[10 pts]</strong> Write a code to print only the passwords with more than 19 characters and include either the letter &#39;D&#39;, the digit &#39;9&#39;, or the punctuation symbol &#39;-&#39;.</p>
+<p>For example, the code should filter the generated passwords listed in 2.a, and print the following output:</p>
+<table>
+<thead><tr>
+<th style="text-align:left;">Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">CanOttawaCAD3.55e+07</td>
+</tr>
+<tr>
+<td style="text-align:left;">IndNewDelhiINR1.26e+09</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">countryinfo</span> <span class="kn">import</span> <span class="n">CountryInfo</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">generate_passwords</span><span class="p">(</span><span class="n">country_names</span><span class="p">):</span>
+    <span class="n">passwords</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">country_name</span> <span class="ow">in</span> <span class="n">country_names</span><span class="p">:</span>
+        <span class="n">country</span> <span class="o">=</span> <span class="n">CountryInfo</span><span class="p">(</span><span class="n">country_name</span><span class="p">)</span>
+
+        <span class="n">country_capital</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">country</span><span class="o">.</span><span class="n">capital</span><span class="p">())</span>
+        <span class="n">country_currency</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">currencies</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">country_population</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">population</span><span class="p">()</span>
+
+        
+        
+        <span class="n">password</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">country_name</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}{</span><span class="n">country_capital</span><span class="si">}{</span><span class="n">country_currency</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}{</span><span class="n">country_population</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2">&quot;</span>
+       
+        <span class="n">passwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">passwords</span>
+
+<span class="c1"># For Example </span>
+<span class="n">countries</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter country names (comma-separated): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">passwords</span> <span class="o">=</span> <span class="n">generate_passwords</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Filtered Passwords:&quot;</span><span class="p">)</span>
+
+<span class="c1">## This condition check the password with more than 19 characters and uses regular expression search to check if the password contains the characters &#39;D&#39;, &#39;9&#39;, or a hyphen                       </span>
+  
+
+<span class="n">filtered_passwords</span> <span class="o">=</span> <span class="p">[</span><span class="n">password</span> <span class="k">for</span> <span class="n">password</span> <span class="ow">in</span> <span class="n">passwords</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">19</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[D9-]&#39;</span><span class="p">,</span> <span class="n">password</span><span class="p">)]</span>                      
+                       
+
+<span class="k">for</span> <span class="n">password</span> <span class="ow">in</span> <span class="n">filtered_passwords</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+                                
+                                
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Enter country names (comma-separated): Iran,Canada,France,Mexico,India,Turkey
+Filtered Passwords:
+CanOttawaCAD3.55e+07
+IndNewDelhiINR1.26e+09
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Question 3  <strong>[40 pts]</strong>:<a rel="noopener" class="anchor-link" href="#Question-3--%5B40-pts%5D:">&#182;</a></h3><p>The following text is an example of a <a rel="noopener" href="https://it.umn.edu/scam-examples-security-advisories/example-248-fake-payment-receipts">fake payment receipt</a>, scammers use to encourage recipients to engage.</p>
+
+<pre><code>From: robert lor &lt;robert6388lor@gmail.com&gt;
+Subject: PAYMENT DONE______________NYR7755269R
+Date: September 9, 2021 at 10:31:42 AM CDT
+To: consumer233@gmail.com
+
+___OUR valued consumer___
+
+thank you for your purchase through NORTON . this email that is to inform you your annual subscription with Norton is RENEWED .
+
+Here is an overview of your recent purchase :-
+
+PRODUCT INFO
+invoice no :- NYR7755269R
+ORDER date :- 09/09/2021
+PAYMENT method : - auto – debited
+
+VALUE :- $321.67
+
+to upgrade /cancel your subscription , PLEASE contact our customer service at
++1 (810)-(515)-(7954)
+
+Thank you,
+Norton billing support</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>a)</strong>  <strong>[10 pts]</strong> Save the text to a file called <code>emailSpam.txt</code>, then compute and display the total number of lines: <code>23</code> and words: <code>91</code>.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;From: robert lor &lt;robert6388lor@gmail.com&gt;</span>
+<span class="s1">Subject: PAYMENT DONE______________NYR7755269R</span>
+<span class="s1">Date: September 9, 2021 at 10:31:42 AM CDT</span>
+<span class="s1">To: consumer233@gmail.com</span>
+
+<span class="s1">___OUR valued consumer___</span>
+
+<span class="s1">thank you for your purchase through NORTON. this email that is to inform you your annual subscription with Norton is RENEWED.</span>
+
+<span class="s1">Here is an overview of your recent purchase:-</span>
+
+<span class="s1">PRODUCT INFO</span>
+<span class="s1">invoice no :- NYR7755269R</span>
+<span class="s1">ORDER date :- 09/09/2021</span>
+<span class="s1">PAYMENT method : - auto – debited</span>
+
+<span class="s1">VALUE :- $321.67</span>
+
+<span class="s1">to upgrade /cancel your subscription, PLEASE contact our customer service at</span>
+<span class="s1">+1 (810)-(515)-(7954)</span>
+
+<span class="s1">Thank you,</span>
+<span class="s1">Norton billing support&#39;&#39;&#39;</span>
+
+<span class="c1"># Save the text to a file called emailSpam.txt</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;emailSpam.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># Compute the total number of lines and words in the text</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;emailSpam.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">num_lines</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+    <span class="n">num_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total number of lines: </span><span class="si">{</span><span class="n">num_lines</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total number of words: </span><span class="si">{</span><span class="n">num_words</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Total number of lines: 23
+Total number of words: 87
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>b) [10 pts]</strong> Find and display the email subject and the number of the upper and lower cases in the subject text.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#INSERT YOUR ANSWER HERE</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># Read the contents of the file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;emailSpam.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Find the email subject using regular expressions</span>
+<span class="n">subject_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Subject:\s*(.*)&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">subject_match</span><span class="p">:</span>
+    <span class="n">subject</span> <span class="o">=</span> <span class="n">subject_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Email Subject:&quot;</span><span class="p">,</span> <span class="n">subject</span><span class="p">)</span>
+
+    <span class="c1"># Count the number of uppercase and lowercase letters in the subject</span>
+    <span class="n">num_uppercase</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">subject</span> <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">isupper</span><span class="p">())</span>
+    <span class="n">num_lowercase</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">subject</span> <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of uppercase letters:&quot;</span><span class="p">,</span> <span class="n">num_uppercase</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of lowercase letters:&quot;</span><span class="p">,</span> <span class="n">num_lowercase</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No email subject found in the text.&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Email Subject: PAYMENT DONE______________NYR7755269R
+Number of uppercase letters: 15
+Number of lowercase letters: 0
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>c) [10 pts]</strong> Define a list that consists of 10 different email spam trigger words, such as <code>RENEWED</code> or <code>purchase</code>, then check whether any of these words exist in the body of the email. If the email contains a spam word, print it; otherwise, return a message that the email does not include any predefined spam words.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#INSERT YOUR ANSWER HERE</span>
+<span class="n">spam_trigger_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RENEWED&#39;</span><span class="p">,</span> <span class="s1">&#39;purchase&#39;</span><span class="p">,</span> <span class="s1">&#39;invoice&#39;</span><span class="p">,</span> <span class="s1">&#39;upgrade&#39;</span><span class="p">,</span> <span class="s1">&#39;cancel&#39;</span><span class="p">,</span> <span class="s1">&#39;auto-debited&#39;</span><span class="p">,</span> <span class="s1">&#39;subscription&#39;</span><span class="p">,</span> <span class="s1">&#39;customer service&#39;</span><span class="p">,</span> <span class="s1">&#39;billing&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">]</span>
+
+<span class="c1"># Read the contents of the file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;emailSpam.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Check if any spam word exists in the email body</span>
+<span class="n">found_spam_words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">spam_trigger_words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="n">found_spam_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="c1"># Print the found spam words or a message if no spam words were found</span>
+<span class="k">if</span> <span class="n">found_spam_words</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The email contains the following spam words:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">found_spam_words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The email does not include any predefined spam words.&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>The email contains the following spam words:
+RENEWED
+purchase
+invoice
+upgrade
+cancel
+subscription
+customer service
+billing
+contact
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p><strong>d) [10 pts]</strong> Find and display the percentage of spam words found in the body of the email using the list of spam trigger words from part c.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#INSERT YOUR ANSWER HERE</span>
+<span class="n">spam_trigger_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RENEWED&#39;</span><span class="p">,</span> <span class="s1">&#39;purchase&#39;</span><span class="p">,</span> <span class="s1">&#39;invoice&#39;</span><span class="p">,</span> <span class="s1">&#39;upgrade&#39;</span><span class="p">,</span> <span class="s1">&#39;cancel&#39;</span><span class="p">,</span> <span class="s1">&#39;auto-debited&#39;</span><span class="p">,</span> <span class="s1">&#39;subscription&#39;</span><span class="p">,</span> <span class="s1">&#39;customer service&#39;</span><span class="p">,</span> <span class="s1">&#39;billing&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">]</span>
+
+<span class="c1"># Read the contents of the file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;emailSpam.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Split the email body into individual words</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="c1"># Count the number of spam words found in the email body</span>
+<span class="n">spam_word_count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">spam_trigger_words</span><span class="p">:</span>
+        <span class="n">spam_word_count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Calculate the percentage of spam words</span>
+<span class="n">total_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="n">percentage_spam_words</span> <span class="o">=</span> <span class="p">(</span><span class="n">spam_word_count</span> <span class="o">/</span> <span class="n">total_words</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Display the percentage of spam words</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percentage of spam words found in the email:&quot;</span><span class="p">,</span> <span class="n">percentage_spam_words</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Percentage of spam words found in the email: 6.896551724137931
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h4>This is the end of assignment 1<a rel="noopener" class="anchor-link" href="#This-is-the-end-of-assignment-1">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/20.23.5-231/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							'outputScale': 1.3,
+							'renderLatex': true
+						});
+					}
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/20.23.5-231/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script></body></html>
